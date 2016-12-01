@@ -1,6 +1,6 @@
 {
   "name": "json-stream-compression",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
   },
   "author": "Philip Patzer",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philip1986/json-stream-compression"
+  },
   "engines" : { "node" : ">= 4" },
   "dependencies": {
     "cbor": "^3.0.0"

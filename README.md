@@ -2,11 +2,7 @@
 
 JSON is great format to exchange data, but it isn't really efficient when it comes to data volume. This module tries to reduce the data size of each message by caching object keys and certain string values. Further it utilizes [CBOR](http://cbor.io/) to convert objects into compact byte buffers.
 
-
-
-**JEFF SAYS:  This solution is good for data with a repetitive structure that you can't predict ahead of time.**
-
-
+This solution is good for data with a repetitive structure that you can't predict ahead of time. There might be better solutions if your data has a fixed structure (e.g.: [Protobuf](https://github.com/dcodeIO/ProtoBuf.js/) or [Avro](https://github.com/jamesbrucepower/node-avro-io))
 
 
 ## Installation
@@ -67,6 +63,5 @@ __Note:__ The encoder and decoder have a synced state! This means messages must 
 
 - Only n to 1 messaging, a decoder instance can only handle messages from a single encoder instance
 - Only works if message delivery is ensured and messages arrive in order
-- It's only beneficial for repeating object keys and/or repeating string values. But if you are sending messages in a fixed structure there might be better options like [Protobuf](https://github.com/dcodeIO/ProtoBuf.js/) or [Avro](https://github.com/jamesbrucepower/node-avro-io)
 - Also keep in mind there are minimum payload sizes (e.g.: 46 Byte for TCP), so it might be not beneficial not make small messages smaller
 - If data doesn't have to be transferred in realtime, it could make more sense to batch them and use something like GZIP for compression  
