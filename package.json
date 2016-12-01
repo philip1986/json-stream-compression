@@ -1,0 +1,31 @@
+{
+  "name": "json-stream-compression",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "cover": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha test",
+    "lint": "./node_modules/eslint/bin/eslint.js --ignore-pattern node_modules/ --ignore-pattern coverage/ ."
+  },
+  "author": "Philip Patzer",
+  "license": "MIT",
+  "engines" : { "node" : ">= 4" },
+  "dependencies": {
+    "cbor": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-google": "^0.7.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "should": "^11.1.1",
+    "ws": "^1.1.1"
+  },
+  "keywords": [
+    "JSON",
+    "compression",
+    "stream",
+    "cbor"
+  ],
+}
